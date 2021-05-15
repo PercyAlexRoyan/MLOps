@@ -14,6 +14,6 @@ COPY test.csv ./test.csv
 COPY train-lda.py ./train-lda.py
 COPY train-nn.py ./train-nn.py
 COPY train-auto-nn.py ./train-auto-nn.py
-RUN chown jovyan:jovyan ./requirements.txt ./test.csv ./train.csv ./train-lda.py ./train-nn.py ./train-auto-nn.py
+RUN chown jovyan:users ./requirements.txt ./test.csv ./train.csv ./train-lda.py ./train-nn.py ./train-auto-nn.py
 #RUN python3 train-lda.py
 #RUN python3 train-nn.py
