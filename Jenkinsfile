@@ -2,17 +2,23 @@ pipeline {
     agent any
 	
     stages{
-	 
-      stage(ML-model Training){
-	    steps{
+
+	stage(docker){
+          steps{
+              sh '''docker build -t my-docker-lda  -f Dockerfile .
+                    docker build -t my-docker-nn  -f Dockerfile .'''
+             }
+           } 
+        stage(modelTraining){
+ 	    steps{
 		       sh ' bash train-lda.sh '
 		   }
 		}
-      stage(Neutral-Network Training){
-        steps{
+       stage(NeutralNetworkTraining){
+         steps{
                sh ' bash train-nn.sh '
            }
         }
      }
 }	
-	  
+	   

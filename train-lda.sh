@@ -13,7 +13,7 @@ then
 fi 
 res=$(sudo cat result.txt)
 test=80
-if [ $test -gt $res ]	
+if [ "$test" -gt "$res" ]	
 then 
       echo "yes"
 else  
