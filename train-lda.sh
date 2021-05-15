@@ -6,7 +6,7 @@ else
       echo " my-docker-lda not built"
 fi 
 			   
-sudo docker run -p 5000:5000 my-docker-lda pyhton3 train-lda.py > result.txt
+sudo docker run -p 5000:5000 my-docker-lda python3 train-lda.py > result.txt
 sudo cat result.txt 
 res=$(sudo cat result.txt)
 test=80
