@@ -5,8 +5,8 @@ pipeline {
 
 	stage(docker){
           steps{
-              sh '''docker build -t my-docker-lda  -f Dockerfile .
-                    docker build -t my-docker-nn  -f Dockerfile .'''
+              sh ''' sudo docker build -t my-docker-lda  -f Dockerfile .
+                     sudo docker build -t my-docker-nn  -f Dockerfile . '''
              }
            } 
         stage(modelTraining){
