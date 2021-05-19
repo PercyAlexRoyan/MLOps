@@ -14,7 +14,7 @@ pipeline {
 		       sh ' bash train-lda.sh '
 		   }
 		}
-       stage(NeutralNetworkTraining){
+       stage(NeuralNetworkTraining){
          steps{
                sh ' bash train-nn.sh '
            }
